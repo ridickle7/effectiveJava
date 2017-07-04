@@ -23,10 +23,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="staticFactory_1_1.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Object_1/staticFactory_1_1.java">
+        <entry file="file://$PROJECT_DIR$/src/Object_1/staticFactory/staticFactory_1_1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="75">
+              <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -50,6 +50,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Object_1/staticFactory_1_1.java" />
+        <option value="$PROJECT_DIR$/src/Object_1/staticFactory/staticFactory_1_1.java" />
       </list>
     </option>
   </component>
@@ -121,7 +122,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Object_1" />
+              <option name="myItemId" value="staticFactory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -578,12 +579,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499193954693</updated>
-      <workItem from="1499193956749" duration="465000" />
+      <workItem from="1499193956749" duration="932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="465000" />
+    <option name="totallyTimeSpent" value="932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="728" extended-state="6" />
@@ -629,10 +630,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Object_1/staticFactory_1_1.java">
+    <entry file="file://$PROJECT_DIR$/src/Object_1/staticFactory/staticFactory_1_1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="75">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
