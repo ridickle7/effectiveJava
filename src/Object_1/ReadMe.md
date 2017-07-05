@@ -20,6 +20,48 @@ Static Factory Method을 활용하면 다음과 같은 장점이 있다.
 
 2. 중복 Signature Constructor의 형태가 가능하다.</br>
 참고 : (함수의 Signature) = (함수 이름) + (입력 매개변수들) + (출력 매개변수)</br>
+기존의 방식이라면 해당 함수는 공존할 수 없습니다.
+<pre><code>// 1. return type이 다른 경우
+int getResult();
+String getResult();
+
+// 2. 매개변수 타입이 같은 Constructor은 공존할 수 없음
+Blog Blog( String bloggerID );
+Blog Blog( String blogName ); 
+</code></pre>
+
+그러나 Static Factory Method를 활용한다면 가능합니다.
+
+
+<pre><code>// 1. return type이 같은 메소드 공존 가능
+public static int getIntResult();
+public static String getStringResult();
+
+// 2. 매개변수 타입이 같은 Constructor 공존 가능
+public static Blog newInstance();
+public static Blog newPowerBlogInstanceWithBloggerID( String powerBloggerID );
+public static Blog newInstanceWithBlogName( String blogName )
+</code></pre>
+
+3. 생성자와 달리 호출될 때마다 새로운 객체를 생성하지 않아도 됨</br>
+생성자를 통해 새로운 객체를 생성할 필요 없이, </br>기존에 만들어져 있는 객체를 반환하는 방식(Singleton) 등을 통해 불필요한 객체 생성을 피할 수 있다.
+
+* 객체 생성 계속 생성하면?</br>
+new 를 통하여 새로운 객체가 생성되면서, **heap 메모리**를 차지하게 된다. (기승전Memory Leak..)
+
+4. 반환하는 타입의 SubType(자식Type)도 반환할 수 있다.
+기본 JAVA의 상속과 다형성을 이해하고 있다면 이 장점은 예상보다 쉽게 이해 될 것이다.
+
+<pre><code>// 이런 활용이 가능하다.
+public static Blog newInstance( String type ){
+  if ( type.equals("Image")
+    return new ImageBlog();
+  else if ( type.equals("video")
+    return new VideoBlog();
+  
+  return null;
+}
+</code></pre>
 
 
 
