@@ -15,11 +15,13 @@ public static Blog newBlogInstance(){
 </code></pre>
 
 Static Factory Method을 활용하면 다음과 같은 장점이 있다.
-1. 기본 생성자와는 다르게 이름을 만들어 줄 수 있다.
+1. 기본 생성자와는 다르게 이름을 만들어 줄 수 있다.</br>
+기존 new '클래스 이름'() 이 아닌 static method 이름으로 인스턴스를 생성할 수 있다.</br>(이는 **가독성 측면**에서 큰 메리트이다.)
 
-기존 new '클래스 이름'() 이 아닌 static method 이름으로 인스턴스를 생성할 수 있다.
+2. 중복 Signature Constructor의 형태가 가능하다.</br>
+참고 : (함수의 Signature) = (함수 이름) + (입력 매개변수들) + (출력 매개변수)</br>
 
-이는 **가독성 측면**에서 큰 메리트가 될 수 있다.
+
 
 Static Factory Convention
 
