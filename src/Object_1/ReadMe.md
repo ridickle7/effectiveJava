@@ -17,7 +17,9 @@ public static Blog newBlogInstance(){
 
 
 Static Factory Convention
+
 아래 함수들은 Static Fatory로 사용된다고 규약을 정한다.
+
 작명 규칙의 예
 <pre><code>1. valueOf      : 파라메터와 같은 값을 리턴
 2. of           : valueOf를 줄인 형태의 이름이며, EnumSet에서 사용
