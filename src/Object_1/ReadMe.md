@@ -14,14 +14,20 @@ public static Blog newBlogInstance(){
 }
 </code></pre>
 
+Static Factory Method을 활용하면 다음과 같은 장점이 있다.
+1. 기본 생성자와는 다르게 이름을 만들어 줄 수 있다.
 
+기존 new '클래스 이름'() 이 아닌 static method 이름으로 인스턴스를 생성할 수 있다.
+
+이는 **가독성 측면**에서 큰 메리트가 될 수 있다.
 
 Static Factory Convention
 
-아래 함수들은 Static Fatory로 사용된다고 규약을 정한다.
+아래 함수들은 Static Fatory로 사용된다고 규약을 정한다. 
 
-작명 규칙의 예
-<pre><code>1. valueOf      : 파라메터와 같은 값을 리턴
+<pre><code>example
+
+1. valueOf      : 파라메터와 같은 값을 리턴
 2. of           : valueOf를 줄인 형태의 이름이며, EnumSet에서 사용
 3. getInstance  : 매개변수에 나타난 인스턴스를 값을 얻어낸다. 매개변수와 같은 값을 가지지 않을 수도 있다. 
                   싱글톤(singleton)의 경우 getInstance는 매개변수가 없고 오직 하나의 인스턴스만 반환
