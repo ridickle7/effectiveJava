@@ -14,7 +14,7 @@ public static Blog newBlogInstance(){
 }
 </code></pre>
 
-Static Factory Method을 활용하면 다음과 같은 장점이 있다.
+Static Factory Method을 활용하면 다음과 같은 장점이 있다.</br></br>
 1. 기본 생성자와는 다르게 이름을 만들어 줄 수 있다.</br>
 기존 new '클래스 이름'() 이 아닌 static method 이름으로 인스턴스를 생성할 수 있다.</br>(이는 **가독성 측면**에서 큰 메리트이다.)
 
@@ -46,8 +46,8 @@ public static Blog newInstanceWithBlogName( String blogName )
 3. 생성자와 달리 호출될 때마다 새로운 객체를 생성하지 않아도 됨</br>
 생성자를 통해 새로운 객체를 생성할 필요 없이, </br>기존에 만들어져 있는 객체를 반환하는 방식(Singleton) 등을 통해 불필요한 객체 생성을 피할 수 있다.
 
-* 객체 생성 계속 생성하면?</br>
-new 를 통하여 새로운 객체가 생성되면서, **heap 메모리**를 차지하게 된다. (기승전Memory Leak..)
+> 객체를 계속 생성하면? </br>
+보통 new 를 통하여 새로운 객체가 생성되면서, **heap 메모리** 를 사용하게 된다. (기승전Memory Leak..)
 
 4. 반환하는 타입의 SubType(자식Type)도 반환할 수 있다.
 기본 JAVA의 상속과 다형성을 이해하고 있다면 이 장점은 예상보다 쉽게 이해 될 것이다.
@@ -63,11 +63,18 @@ public static Blog newInstance( String type ){
 }
 </code></pre>
 
+장점과 활용 예제들을 보면서 Static Factory Method의 단점과 주의사항을 캐치한 사람들이 있을 것이다.
+
+단도직입적으로 이야기하면 **naming** 에 신중을 가해야 한다.</br>
+naming을 제대로 하지 않는다면 위에서 말한 **가독성**은 물론 **효율적인 코드 작성**도 매우 힘들어질 것이다.
 
 
-Static Factory Convention
 
-아래 함수들은 Static Fatory로 사용된다고 규약을 정한다. 
+
+## 기타
+Static Factory Convention (Static Factory Method 규약)
+
+규약을 정함으로써 Static Factory Method 활용을 조금 더 쉽게 할 수 있다.
 
 <pre><code>example
 
