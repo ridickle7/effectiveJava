@@ -146,3 +146,13 @@
 
 코드리뷰
 - private static Singleton 클래스를 통해 객체 생성
+- getInstance() 내에서는 Singleton 클래스 내 instance 값을 추출해 냄
+
+ ※ 현재 java 에서 singleton 을 생성시킨다고 하면 거의 위의 방법을 사용한다고 보면 된다.
+ 
+ 
+
+### 6.  jvm 의 class loader의 매커니즘과 class의 load 시점을 이용한 싱글턴 패턴
+- JVM의 class loader의 매커니즘, Class의 load 시점을 이용하여 내부 class를 생성
+- 모든 java 버젼과, jvm에서 사용이 가능하며, Thread 간 동기화 문제 해결함
+
