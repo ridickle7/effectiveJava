@@ -2,7 +2,7 @@
 
 생성자와 Static Factory Method 의 경우 매개변수 처리가 유연하지 않다.
 
-1. 텔레스코핑 생성자(telescoping constructor) 패턴
+### 1. 텔레스코핑 생성자(telescoping constructor) 패턴
 - 해석하면 점층적 생성자 패턴
 - 필수인자만 받는 생성자 하나를 정의하고, 선택적 인자를 점층적으로 추가하여 해당 파라미터 내용들에 대한 생성자를 호출하는 방식
 
@@ -41,7 +41,7 @@ public class NutritionFacts {
 2. 설정할 필요가 없는 필드에도 인자를 전달해야 한다. (예제에서는 0)
 
 
-2. 자바빈즈(javabeans) 패턴
+### 2. 자바빈즈(javabeans) 패턴
 - 매개변수가 없는 생성자를 호출해서 객체를 생성하고 setter메소드를 호출해 각각의 값들을 모두 지정하는 방식
 
 <pre><code>// example
@@ -60,7 +60,7 @@ public class NutritionFacts {
 2. 설정할 필요가 없는 필드에도 인자를 전달해야 한다. (예제에서는 0)
 
 
-3. 빌더(builder) 패턴
+### 3. 빌더(builder) 패턴
 - 텔레스코핑 생성자 패턴의 **안전성** + 자바빈즈 패턴의 **가독성**을 결합한 패턴
 - jquery의 메소드 체이닝 방법과 유사(?!)해 보인다.
 
