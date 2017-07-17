@@ -151,8 +151,16 @@
  ※ 현재 java 에서 singleton 을 생성시킨다고 하면 거의 위의 방법을 사용한다고 보면 된다.
  
  
+### effective Java 에서는
+1. private 생성자를 활용하여 인스턴스를 초기화하는 등의 작업을 하라
+2. enum (열거형) 타입을 활용하자!
 
-### 6.  enum을 활용한 싱글턴 패턴 (effective Java에서 이야기하는 싱글턴 패턴)
+를 이야기하고 있다.
+
+1) private 생성자
+- 생성자를 private로 처리한다.
+
+2) enum을 활용하라
 > **enum**은 그 타입 변수의 모든 가능한 값을 열거하고, 열거한 값 중 하나의 값만 가질 수 있다.
 <pre><code>enum Season {winter, spring, summer, fall};
 //...
@@ -160,6 +168,7 @@ Season time; 	// time은 winter, spring, summer, fall 중 하나의 값만 가�
 time = "abcd"; 	// 컴파일 에러 발생
 </code></pre>
 
+### 6.  enum을 활용한 싱글턴 패턴 (effective Java에서 이야기하는 싱글턴 패턴)
 - enum을 활용하여 싱글턴 패턴을 사용할 수 있다!
 
 <pre><code>// enum을 활용한 싱글턴 패턴
