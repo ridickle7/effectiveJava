@@ -7,16 +7,11 @@
 - 일반적이고 최소의 기능만 있는 싱글턴 패턴
 
 <pre><code>public class EagerInitialization {
-	private static EagerInitialization instance = new EagerInitialization();  // private static 로 선언.
+	private static final EagerInitialization instance = new EagerInitialization();  // private static 로 선언.
 	
   	// 생성자
 	private EagerInitialization () {  
 		System.out.println( "call EagerInitialization constructor." );
-	}
-
-  	// 조회 method
-	public static EagerInitialization getInstance () {	
-		return instance;
 	}
 	
 	public void print () {
@@ -27,6 +22,7 @@
 </code></pre>
 코드리뷰
 - 클래스 생성되는 시점에서 인스턴스가 초기화 됨.
+- 클래스가 로드될때 항상 객체가 생성
 
 해당 방식의 문제점
 1. 클래스가 load 되는 시점에 인스턴스를 생성시키는데 이마저도 부담스러울 수가 있다. (2 line)
@@ -41,7 +37,7 @@
 	private static StaticBlockInitalization instance;
 	private StaticBlockInitalization () {}
 	
-	static {  // static 초기화블럭
+	static {  //static 초기화 블럭 (클래스가 로딩 될 때 최초 한번만 실행된다.)
 		try {
 			System.out.println("instance create..");
 			instance = new StaticBlockInitalization();
@@ -68,7 +64,38 @@
    (아직 1-1 "클래스가 load 되는 시점에 인스턴스를 생성시키는데 이마저도 부담스러울 수가 있다." 해결 못함) 
 
 
-### 3. 클래스 인스턴스가 사용되는 시점에 인스턴스를 만드는 싱글턴 패턴
+### 3. 정적 팩토리를 활용한 싱글턴 패턴
+- 싱글턴 패턴을 포기하는 상황에서 좀더 유연하게 작동
+
+<pre><code>public class SingletonByFactory {
+	private static final SingletonByFactory instance = new SingletonByFactory();
+	
+  	// 생성자
+	private SingletonByFactory () {  
+		System.out.println( "call SingletonByFactory constructor." );
+	}
+
+  	// 조회 method
+	public static SingletonByFactory getInstance () {	
+		return instance;
+	}
+	
+	public void print () {
+		System.out.println("It's print() method in EagerInitialization instance.");
+		System.out.println("instance hashCode > " + instance.hashCode());
+	}
+}
+</code></pre>
+코드리뷰
+- 정적 팩터리를 사용
+  (메소드를 사용하기 때문에 내부 구현의 변화에 따른 클라이언트 코드의 영향을 줄일 수 있다.)
+
+해당 방식의 문제점
+1. 인스턴스가 사용되는 시점에 생성되는 것은 아니다.
+   (아직 1-1 "클래스가 load 되는 시점에 인스턴스를 생성시키는데 이마저도 부담스러울 수가 있다." 해결 못함)
+
+
+### 4. 클래스 인스턴스가 사용되는 시점에 인스턴스를 만드는 싱글턴 패턴
 - 클래스 인스턴스가 사용되는 시점에 인스턴스를 만듬
 - 필요할때 인스턴스를 생성시키는 것이 핵심
 
@@ -97,7 +124,7 @@
 1. 프로그램이 muilti thread 방식이라면 안전하지 않다.
    ex> 동일 시점에 각 쓰레드에서 getInstance() method를 호출하면 인스턴스가 두번 생길 위험이 있다.
 
-### 4. Thread safe 싱글턴 패턴
+### 5. Thread safe 싱글턴 패턴
 - Multi Thread 문제를 해결하기 위해 synchronized(동기화)를 사용
 - 여러 thread들이 동시에 접근해서 인스턴스를 생성시키는 위험은 없어짐
 
@@ -126,13 +153,15 @@
 1. 수 많은 Thread 들이 getInstance() method 를 호출하면, 높은 cost 비용으로 인해 프로그램 전반에 성능저하 발생
 
 
-### 5.  jvm 의 class loader의 매커니즘과 class의 load 시점을 이용한 싱글턴 패턴
+### 6.  jvm 의 class loader의 매커니즘과 class의 load 시점을 이용한 싱글턴 패턴
 - JVM의 class loader의 매커니즘, Class의 load 시점을 이용하여 내부 class를 생성
 - 모든 java 버젼과, jvm에서 사용이 가능하며, Thread 간 동기화 문제 해결함
 
-<pre><code>public class InitializationOnDemandHolderIdiom {
-	
+<pre><code>// 클래스 로드 시점에 초기화되는 InitializationOnDemandHolderIdiom 클래스
+public class InitializationOnDemandHolderIdiom {
 	private InitializationOnDemandHolderIdiom () {}
+	
+	// 정적 클래스로 정의된 내부 클래스 (초기화가 클래스를 로드한 시점에 이루어지지 않음)
 	private static class Singleton {
 		private static final InitializationOnDemandHolderIdiom instance = new InitializationOnDemandHolderIdiom();
 	}
@@ -147,8 +176,15 @@
 코드리뷰
 - private static Singleton 클래스를 통해 객체 생성
 - getInstance() 내에서는 Singleton 클래스 내 instance 값을 추출해 냄
+- 현재 java 에서 singleton 을 생성시킨다고 하면 거의 위의 방법을 사용하고 있음.
+ 
+※ 참고 : 클래스가 최초로 초기화 되는 시점
+- T에서 선언한 정적 필드가 상수 변수가 아니며 사용되었을 때
+- T가 클래스이며 T의 인스턴스가 생성될 때
+- T가 클래스이며 T에서 선언한 정적 메소드가 호출되었을 때
+- T에서 선언한 정적 필드에 값이 할당되었을 때
+- T가 최상위 클래스(상속 관계에서)이며 T안에 위치한 assert 구문이 실행되었을 때
 
- ※ 현재 java 에서 singleton 을 생성시킨다고 하면 거의 위의 방법을 사용한다고 보면 된다.
  
  
 ### effective Java 에서는
@@ -168,7 +204,7 @@ Season time; 	// time은 winter, spring, summer, fall 중 하나의 값만 가�
 time = "abcd"; 	// 컴파일 에러 발생
 </code></pre>
 
-### 6.  enum을 활용한 싱글턴 패턴 (effective Java에서 이야기하는 싱글턴 패턴)
+### 7.  enum을 활용한 싱글턴 패턴 (effective Java에서 이야기하는 싱글턴 패턴)
 - enum을 활용하여 싱글턴 패턴을 사용할 수 있다!
 
 <pre><code>// enum을 활용한 싱글턴 패턴
@@ -190,11 +226,3 @@ public static void main(String[] args){
 코드리뷰
 - 복잡한 직렬화나 리플랙션 상황에서도 직렬화가 자동으로 지원
 - 인스턴스가 여러 개 생기지 않도록 확실하게 보장
-
-
- ※ 참고 : 클래스가 최초로 초기화 되는 시점
-- T에서 선언한 정적 필드가 상수 변수가 아니며 사용되었을 때
-- T가 클래스이며 T의 인스턴스가 생성될 때
-- T가 클래스이며 T에서 선언한 정적 메소드가 호출되었을 때
-- T에서 선언한 정적 필드에 값이 할당되었을 때
-- T가 최상위 클래스(상속 관계에서)이며 T안에 위치한 assert 구문이 실행되었을 때
