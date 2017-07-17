@@ -152,10 +152,9 @@
  
  
 
-### 6.  enum을 활용한 싱글턴 패턴
+### 6.  enum을 활용한 싱글턴 패턴 (effective Java에서 이야기하는 싱글턴 패턴)
 > **enum**은 그 타입 변수의 모든 가능한 값을 열거하고, 열거한 값 중 하나의 값만 가질 수 있다.
-<pre><code>
-enum Season {winter, spring, summer, fall};
+<pre><code>enum Season {winter, spring, summer, fall};
 //...
 Season time; 	// time은 winter, spring, summer, fall 중 하나의 값만 가질 수 있다.
 time = "abcd"; 	// 컴파일 에러 발생
@@ -163,24 +162,30 @@ time = "abcd"; 	// 컴파일 에러 발생
 
 - enum을 활용하여 싱글턴 패턴을 사용할 수 있다!
 
-<pre><code>public class Elvis {
-    public static final Elvis INSTANCE = new Elvis(); // static final!!
-    private ElvisO { ... } // private 생성자!!
-    public void leaveTheBuilding() { .. . }
-}
-
-//.....
-
+<pre><code>// enum을 활용한 싱글턴 패턴
 public enum Elvis{
      INSTNACE;
+     
      private String test = "abc"
      public void leaveTheBuilding(){
           this.test = "ccc"; // INSTANCE.test 도 가능.
      }
  }
-  
+ 
+ // ......
+ 
+public static void main(String[] args){
+     Elvis elvis = Elvis.INSTANCE;    
+}
 </code></pre>
-
 코드리뷰
-- private static Singleton 클래스를 통해 객체 생성
-- getInstance() 내에서는 Singleton 클래스 내 instance 값을 추출해 냄
+- 복잡한 직렬화나 리플랙션 상황에서도 직렬화가 자동으로 지원
+- 인스턴스가 여러 개 생기지 않도록 확실하게 보장
+
+
+ ※ 참고 : 클래스가 최초로 초기화 되는 시점
+- T에서 선언한 정적 필드가 상수 변수가 아니며 사용되었을 때
+- T가 클래스이며 T의 인스턴스가 생성될 때
+- T가 클래스이며 T에서 선언한 정적 메소드가 호출되었을 때
+- T에서 선언한 정적 필드에 값이 할당되었을 때
+- T가 최상위 클래스(상속 관계에서)이며 T안에 위치한 assert 구문이 실행되었을 때
