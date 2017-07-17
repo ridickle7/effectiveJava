@@ -152,7 +152,35 @@
  
  
 
-### 6.  jvm 의 class loader의 매커니즘과 class의 load 시점을 이용한 싱글턴 패턴
-- JVM의 class loader의 매커니즘, Class의 load 시점을 이용하여 내부 class를 생성
-- 모든 java 버젼과, jvm에서 사용이 가능하며, Thread 간 동기화 문제 해결함
+### 6.  enum을 활용한 싱글턴 패턴
+> **enum**은 그 타입 변수의 모든 가능한 값을 열거하고, 열거한 값 중 하나의 값만 가질 수 있다.
+<pre><code>
+enum Season {winter, spring, summer, fall};
+//...
+Season time; 	// time은 winter, spring, summer, fall 중 하나의 값만 가질 수 있다.
+time = "abcd"; 	// 컴파일 에러 발생
+</code></pre>
 
+- enum을 활용하여 싱글턴 패턴을 사용할 수 있다!
+
+<pre><code>public class Elvis {
+    public static final Elvis INSTANCE = new Elvis(); // static final!!
+    private ElvisO { ... } // private 생성자!!
+    public void leaveTheBuilding() { .. . }
+}
+
+//.....
+
+public enum Elvis{
+     INSTNACE;
+     private String test = "abc"
+     public void leaveTheBuilding(){
+          this.test = "ccc"; // INSTANCE.test 도 가능.
+     }
+ }
+  
+</code></pre>
+
+코드리뷰
+- private static Singleton 클래스를 통해 객체 생성
+- getInstance() 내에서는 Singleton 클래스 내 instance 값을 추출해 냄
