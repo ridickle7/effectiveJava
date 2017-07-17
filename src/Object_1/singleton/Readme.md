@@ -1,7 +1,7 @@
 ## Singleton
 
 싱글톤(singleton)이란?
-- 하나의 인스턴스만 생성되는 클래스 / 유일한 시스템 컴포넌트를 나타냄!
+- 하나의 인스턴스만 생성되는 **클래스** 또는 **유일한 시스템 컴포넌트**를 나타냄!
 
 ### 1. 가장 기본적인 싱글턴 패턴
 - 일반적이고 최소의 기능만 있는 싱글턴 패턴
@@ -9,12 +9,12 @@
 <pre><code>public class EagerInitialization {
 	private static EagerInitialization instance = new EagerInitialization();  // private static 로 선언.
 	
-  // 생성자
+  	// 생성자
 	private EagerInitialization () {  
 		System.out.println( "call EagerInitialization constructor." );
 	}
 
-  // 조회 method
+  	// 조회 method
 	public static EagerInitialization getInstance () {	
 		return instance;
 	}
