@@ -23,9 +23,6 @@ public class builder_1_2 {
                 .fat(4)
                 .sodium(5)
                 .carbohydrate(6).build();
-
-
-
     }
 }
 

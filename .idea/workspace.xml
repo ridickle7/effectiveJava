@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="728da6dd-adad-488d-a37e-75e37dcf1bee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_Builder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_JavaBeans.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_Telescoping.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Object_1/singleton/singleton_1_3.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Object_1/singleton/Elvis.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Object_1/builder/builder_1_2.java" afterPath="$PROJECT_DIR$/src/Object_1/builder/builder_1_2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Object_1/singleton/singleton_1_3.java" afterPath="$PROJECT_DIR$/src/Object_1/singleton/singleton_1_3.java" />
     </list>
     <ignored path="effective_Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,8 +40,8 @@
       <file leaf-file-name="builder_1_2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Object_1/builder/builder_1_2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#builder_1_2#0" expanded="false" />
               </folding>
@@ -55,7 +52,7 @@
       <file leaf-file-name="NutritionFacts_Builder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_Builder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
+            <state relative-caret-position="596">
               <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
               <folding />
             </state>
@@ -65,9 +62,25 @@
       <file leaf-file-name="singleton_1_3.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Object_1/singleton/singleton_1_3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#148#149#0" expanded="true" />
+                <element signature="e#192#193#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Elvis.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Object_1/singleton/Elvis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding>
+                <element signature="e#134#135#0" expanded="true" />
+                <element signature="e#189#190#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,8 +129,10 @@
         <option value="$PROJECT_DIR$/src/Object_1/staticFactory/staticFactory_1_1.java" />
         <option value="$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_Telescoping.java" />
         <option value="$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_JavaBeans.java" />
-        <option value="$PROJECT_DIR$/src/Object_1/builder/builder_1_2.java" />
         <option value="$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_Builder.java" />
+        <option value="$PROJECT_DIR$/src/Object_1/builder/builder_1_2.java" />
+        <option value="$PROJECT_DIR$/src/Object_1/singleton/Elvis.java" />
+        <option value="$PROJECT_DIR$/src/Object_1/singleton/singleton_1_3.java" />
       </list>
     </option>
   </component>
@@ -236,6 +251,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="singleton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="effective_Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="effective_Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Object_1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="builder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -698,12 +735,12 @@
       <option name="presentableId" value="Default" />
       <updated>1499193954693</updated>
       <workItem from="1499193956749" duration="8289000" />
-      <workItem from="1499839796276" duration="5496000" />
+      <workItem from="1499839796276" duration="9505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13785000" />
+    <option name="totallyTimeSpent" value="17794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -775,16 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Object_1/builder/builder_1_2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#builder_1_2#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Object_1/staticFactory/Readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -795,17 +822,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_Builder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
+        <state relative-caret-position="596">
           <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Object_1/builder/builder_1_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#builder_1_2#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Object_1/singleton/Elvis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="e#134#135#0" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Object_1/singleton/singleton_1_3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#148#149#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
