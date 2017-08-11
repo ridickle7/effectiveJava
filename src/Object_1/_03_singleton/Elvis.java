@@ -1,4 +1,4 @@
-package Object_1.singleton;
+package Object_1._03_singleton;
 
 /**
  * Created by ridickle on 2017. 7. 17..

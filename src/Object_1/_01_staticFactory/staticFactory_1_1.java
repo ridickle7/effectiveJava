@@ -1,4 +1,4 @@
-package Object_1.staticFactory;
+package Object_1._01_staticFactory;
 
 /**
  * Created by ridickle on 2017. 7. 5..
