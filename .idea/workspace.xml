@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="728da6dd-adad-488d-a37e-75e37dcf1bee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Object_1/_03_singleton/_1_Simple_Singleton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Object_1/_03_singleton/_2_staticBlock_Singleton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Object_1/_03_singleton/_3_StaticFactory_Singleton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Object_1/_03_singleton/_4_LazyInitialization_Singleton.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_Builder.java" afterPath="$PROJECT_DIR$/src/Object_1/_02_builder/NutritionFacts_Builder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_JavaBeans.java" afterPath="$PROJECT_DIR$/src/Object_1/_02_builder/NutritionFacts_JavaBeans.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Object_1/builder/NutritionFacts_Telescoping.java" afterPath="$PROJECT_DIR$/src/Object_1/_02_builder/NutritionFacts_Telescoping.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Object_1/builder/Readme.md" afterPath="$PROJECT_DIR$/src/Object_1/_02_builder/Readme.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Object_1/builder/builder_1_2.java" afterPath="$PROJECT_DIR$/src/Object_1/_02_builder/builder_1_2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Object_1/singleton/Elvis.java" afterPath="$PROJECT_DIR$/src/Object_1/_03_singleton/Elvis.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Object_1/singleton/singleton_1_3.java" afterPath="$PROJECT_DIR$/src/Object_1/_03_singleton/singleton_1_3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Object_1/staticFactory/Readme.md" afterPath="$PROJECT_DIR$/src/Object_1/_01_staticFactory/Readme.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Object_1/staticFactory/staticFactory_1_1.java" afterPath="$PROJECT_DIR$/src/Object_1/_01_staticFactory/staticFactory_1_1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Object_1/_04_private/private_1_4.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="effective_Java.iws" />
@@ -37,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="builder_1_2.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="builder_1_2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Object_1/_02_builder/builder_1_2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
@@ -45,6 +33,16 @@
               <folding>
                 <element signature="docComment;class#builder_1_2#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="private_1_4.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Object_1/_04_private/private_1_4.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,19 +63,6 @@
             <state relative-caret-position="135">
               <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_1_Simple_Singleton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Object_1/_03_singleton/_1_Simple_Singleton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-              <folding>
-                <element signature="e#271#272#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -183,6 +168,7 @@
         <option value="$PROJECT_DIR$/src/Object_1/singleton/_3_StaticFactory_Singleton.java" />
         <option value="$PROJECT_DIR$/src/Object_1/singleton/_4_LazyInitialization_Singleton.java" />
         <option value="$PROJECT_DIR$/src/Object_1/_03_singleton/Elvis.java" />
+        <option value="$PROJECT_DIR$/src/Object_1/_04_private/private_1_4.java" />
       </list>
     </option>
   </component>
@@ -255,6 +241,32 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Object_1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="effective_Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="effective_Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Object_1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_04_private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private_1_4.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -741,16 +753,24 @@
       <workItem from="1501342188587" duration="229000" />
       <workItem from="1501419803356" duration="250000" />
       <workItem from="1501554706432" duration="596000" />
-      <workItem from="1502449824665" duration="491000" />
+      <workItem from="1502449824665" duration="1499000" />
     </task>
+    <task id="LOCAL-00001" summary="Update Chapter&#10;&#10;1) rename chapter&#10;2) start 04_private">
+      <created>1502450441349</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1502450441349</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21077000" />
+    <option name="totallyTimeSpent" value="22085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -760,7 +780,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2584814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2584814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -787,11 +807,19 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update Chapter&#10;&#10;1) rename chapter&#10;2) start 04_private" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Chapter&#10;&#10;1) rename chapter&#10;2) start 04_private" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Object_1/_02_builder/builder_1_2.java">
@@ -825,8 +853,8 @@
         <state relative-caret-position="135">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#325#326#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -918,8 +946,8 @@
         <state relative-caret-position="135">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#325#326#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1011,8 +1039,8 @@
         <state relative-caret-position="135">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#325#326#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1061,8 +1089,8 @@
         <state relative-caret-position="135">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#325#326#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1107,8 +1135,8 @@
         <state relative-caret-position="135">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#325#326#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1192,6 +1220,14 @@
           <folding>
             <element signature="docComment;class#builder_1_2#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Object_1/_04_private/private_1_4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
