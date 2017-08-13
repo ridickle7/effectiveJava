@@ -5,7 +5,7 @@ package Object_1._04_private;
  */
 public class private_1_4 {
 
-    UtilityClass instance = UtilityClass(); // 생성이 안됨 (오류코드)
+//    UtilityClass instance = UtilityClass(); // 생성이 안됨 (오류코드)
 }
 
 
@@ -17,8 +17,8 @@ class UtilityClass {
     }
 }
 
-class UtilSubClass extends UtilityClass{
-
-    // 부모 클래스 생성자가 private라 자식 클래스도 그 영향을 받는다.
-    private UtilSubClass() {}    // (오류코드)
-}
+//class UtilSubClass extends UtilityClass{
+//
+//    // 부모 클래스 생성자가 private라 자식 클래스도 그 영향을 받는다.
+////    private UtilSubClass() {}    // (오류코드)
+//}
