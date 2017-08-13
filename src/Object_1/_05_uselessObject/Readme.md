@@ -70,7 +70,7 @@ ex) int age2 = age.intValue(); <br>
 > 2. AutoUnboxing : 각각의 객체를 기본 자료형으로 변경하여 사용하는 과정 <br>
 > ex> int age2 = age; <br>
 
-#### 기타
+#### Round 4. 기타
 1. Integer.parseInt("100") / Integer.valueOf("100") 의 차이 <br>
 > Integer.parseInt("100")<br>
 > "100"이라는 문자열에서 primitive 데이터를 얻어낸다.<br>
@@ -80,6 +80,7 @@ ex) int age2 = age.intValue(); <br>
 > "100"이라는 문자열에서 Wrapper class 데이터를 얻어낸다.<br>
 >  get **Wrapper class data**
 
-참고 Reference
+
+#### 참고 Reference
 1. http://blog.hazard.kr/archives/408
 2. http://jusungpark.tistory.com/17
