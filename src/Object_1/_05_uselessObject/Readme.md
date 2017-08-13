@@ -80,6 +80,8 @@ ex) int age2 = age.intValue(); <br>
 > "100"이라는 문자열에서 Wrapper class 데이터를 얻어낸다.<br>
 >  get **Wrapper class data**
 
+다른 자료형들의 parse와 valueOf 정리 List <br>
+![Image](https://github.com/ridickle7/effectiveJava/blob/master/src/Object_1/_05_uselessObject/parse%2C%20valueOf.png)
 
 #### 참고 Reference
 1. http://blog.hazard.kr/archives/408
